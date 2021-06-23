@@ -10,7 +10,7 @@ source:
   sha256: 6b56eda336f75df5f51beb9d72b0bbd182fb7f982ae01ace396733ad45aea070
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -21,7 +21,7 @@ requirements:
     - setuptools
     - wheel
   run:
-    - apache-airflow >=2.0.0
+    - apache-airflow >=2.1.0
     - python >=3.6
     - slack-sdk >=3.0.0,<4.0.0
 
