@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-slack" %}
-{% set version = "4.0.1" %}
+{% set version = "4.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-slack-{{ version }}.tar.gz
-  sha256: f8d87e2d06d32cf9b3d041e0bdc9a3102dc37e7472d4c0f6e3a50103d72dc742
+  sha256: 9e3f2158ecde1c4df7c61a6b28c30f9b6a85b0c07844ddab18ec4543f968e0cf
 
 build:
   number: 0
