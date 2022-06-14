@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-slack" %}
-{% set version = "4.2.3" %}
+{% set version = "5.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,27 +7,27 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-slack-{{ version }}.tar.gz
-  sha256: 1839ff991e7456f7a7d370129d1e8b4b22526cdfe8a6d918976de5b3eb606128
+  sha256: e8de3b7234f1deca15383fbc77dd54c98a2c701ee107f51d73003f208a293735
 
 build:
-  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
+  number: 0
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7
     - pip
     - setuptools
   run:
-    - python >=3.6
-    - apache-airflow >=2.1.0
+    - python >=3.7
+    - apache-airflow >=2.2.0
     - slack-sdk >=3.0.0
 
 test:
   imports:
     - airflow.providers.slack
-    - airflow.providers.slack.hooks
+    - airflow.providers.slack.example_dags
   commands:
     - pip check
   requires:
@@ -35,9 +35,12 @@ test:
 
 about:
   home: https://airflow.apache.org/
-  summary: Provider for Slack for Apache Airflow
+  summary: Provider for Apache Airflow. Implements apache-airflow-providers-slack package
   license: Apache-2.0
-  license_file: LICENSE
+  license_file:
+    - LICENSE
+    - NOTICE
+  license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-slack/stable/index.html
   dev_url: https://github.com/apache/airflow/
 
