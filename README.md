@@ -7,7 +7,7 @@ Package license: Apache-2.0
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/apache-airflow-providers-slack-feedstock/blob/main/LICENSE.txt)
 
-Summary: Provider for Slack for Apache Airflow
+Summary: Provider for Apache Airflow. Implements apache-airflow-providers-slack package
 
 Development: https://github.com/apache/airflow/
 
