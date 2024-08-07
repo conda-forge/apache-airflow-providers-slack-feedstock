@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-slack" %}
-{% set version = "8.7.1" %}
+{% set version = "8.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_slack-{{ version }}.tar.gz
-  sha256: 6afce534d6f950f4d729fc9a113b2086b354a6b6a20514f7a9cdd3f6b98f5721
+  sha256: d8350481b65b575161444a3339a60cdf343fec6672adb48153f79a118dbac8f1
 
 build:
   noarch: python
@@ -20,10 +20,10 @@ requirements:
     - flit-core >=3.2,<4
     - pip
   run:
-    - slack_sdk >=3.19.0
-    - python >=3.8
+    - python >=3.8,<4.dev0
     - apache-airflow-providers-common-sql >=1.3.1
     - apache-airflow >=2.7.0
+    - slack_sdk >=3.19.0
 
 test:
   imports:
