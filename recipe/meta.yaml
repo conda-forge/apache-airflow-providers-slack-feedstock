@@ -21,8 +21,8 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - apache-airflow-providers-common-sql >=1.20.0
     - apache-airflow >=2.9.0
+    - apache-airflow-providers-common-sql >=1.20.0
     - slack_sdk >=3.19.0
 
 test:
@@ -38,7 +38,7 @@ about:
   home: https://github.com/apache/airflow/
   summary: Provider package apache-airflow-providers-slack for Apache Airflow
   license: Apache-2.0
-  license_file: airflow/providers/slack/LICENSE
+  license_file: src/airflow/providers/slack/LICENSE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-slack/stable/index.html
   dev_url: https://github.com/apache/airflow/
