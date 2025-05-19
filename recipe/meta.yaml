@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-slack" %}
-{% set version = "9.0.5" %}
+{% set version = "9.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_slack-{{ version }}.tar.gz
-  sha256: bece2e12b3bbaf01863cb5ac754c1eba196476430f2dc8433d3427fa852520dc
+  sha256: 2c36ef75901c1d4b5839803111bb60c5ca70796ce41861cdd2f9f9d4685e7fd4
 
 build:
   noarch: python
@@ -21,9 +21,9 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - apache-airflow >=2.9.0
-    - apache-airflow-providers-common-compat >=1.6.0
-    - apache-airflow-providers-common-sql >=1.20.0
+    - apache-airflow >=2.10.0
+    - apache-airflow-providers-common-compat >=1.6.1
+    - apache-airflow-providers-common-sql >=1.27.0
     - slack_sdk >=3.19.0
 
 test:
