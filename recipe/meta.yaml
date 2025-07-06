@@ -1,5 +1,6 @@
 {% set name = "apache-airflow-providers-slack" %}
-{% set version = "9.1.1" %}
+{% set version = "9.1.2" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_slack-{{ version }}.tar.gz
-  sha256: ce933d97cbb10a1c3ac8ae5e297ca8889ae6714b0ac4673e03c50668a23d7e7f
+  sha256: cb232e9a52b8593fa7a6664314c8468293c3b99542e785ccae94f4b31119df92
 
 build:
   noarch: python
