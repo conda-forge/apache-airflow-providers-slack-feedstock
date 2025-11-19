@@ -1,6 +1,5 @@
 {% set name = "apache-airflow-providers-slack" %}
-{% set version = "9.4.0" %}
-{% set python_min = "3.10" %}
+{% set version = "9.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_slack-{{ version }}.tar.gz
-  sha256: 2431a8a0b93c3d783119daf87c1585d0d9bf42f92e522ca08842d528c2b09963
+  sha256: 56c00b8ec6115d612dec1cab49b6b455042b8a1d4d0388229b524ac75d0d6d85
 
 build:
   noarch: python
@@ -23,7 +22,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - apache-airflow >=2.10.0
-    - apache-airflow-providers-common-compat >=1.8.0
+    - apache-airflow-providers-common-compat >=1.9.0
     - apache-airflow-providers-common-sql >=1.27.0
     - slack_sdk >=3.36.0
     - asgiref >=2.3.0
@@ -41,7 +40,9 @@ about:
   home: https://github.com/apache/airflow/
   summary: Provider package apache-airflow-providers-slack for Apache Airflow
   license: Apache-2.0
-  license_file: src/airflow/providers/slack/LICENSE
+  license_file:
+    - LICENSE
+    - NOTICE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-slack/stable/index.html
   dev_url: https://github.com/apache/airflow/
