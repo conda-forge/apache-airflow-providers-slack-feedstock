@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-slack
-  version: "9.10.1"
+  version: "9.10.2"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_slack-${{ version }}.tar.gz
-  sha256: 4117ae0755fc34e5c7b571340f7f7e6ff48d5b88cef214385c9abd369b09bf37
+  sha256: 1679226c0064810e9d31f3650e8488b4ba44348d52ab38cf4bc8e212ea6a6c9b
 
 build:
   noarch: python
@@ -26,6 +26,7 @@ requirements:
     - apache-airflow-providers-common-compat >=1.10.1
     - apache-airflow-providers-common-sql >=1.27.0
     - slack_sdk >=3.36.0
+    - aiohttp >=3.14.0
     # more restrictive for python >=3.14
     - asgiref >=3.11.1
 
