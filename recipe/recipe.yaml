@@ -19,7 +19,7 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - flit-core ==3.12.0
+    - flit-core ==4.0.2
   run:
     - python >=${{ python_min }}
     - apache-airflow >=2.11.0
@@ -27,7 +27,7 @@ requirements:
     - apache-airflow-providers-common-sql >=1.27.0
     - slack_sdk >=3.36.0
     - aiohttp >=3.14.0
-    # more restrictive for python >=3.14
+    # tightest of upstream's floors (python >=3.14)
     - asgiref >=3.11.1
 
 tests:
