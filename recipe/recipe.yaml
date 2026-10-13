@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-slack
-  version: "9.11.0"
+  version: "9.11.1"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_slack-${{ version }}.tar.gz
-  sha256: 866ca2b69ea777abb76aed3fa604d72bfb3ff72653b62ce6d74e1fc6f3ca6612
+  sha256: 8c538d38241b8950aeee94c1074549f76a9c275a5648c0a1422080e96465056e
 
 build:
   noarch: python
@@ -19,7 +19,7 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - flit-core ==4.0.2
+    - flit-core ==4.1.0
   run:
     - python >=${{ python_min }}
     - apache-airflow >=2.11.0
